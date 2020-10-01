@@ -440,7 +440,6 @@ D:\AlluringDecors\bin\ko\System.Spatial.resources.dll
 D:\AlluringDecors\bin\ru\System.Spatial.resources.dll
 D:\AlluringDecors\bin\zh-Hans\System.Spatial.resources.dll
 D:\AlluringDecors\bin\zh-Hant\System.Spatial.resources.dll
-D:\AlluringDecors\obj\Debug\AlluringDecors.csprojAssemblyReference.cache
 D:\AlluringDecors\obj\Debug\AlluringDecors.csproj.CoreCompileInputs.cache
 D:\AlluringDecors\obj\Debug\AlluringDecors.csproj.CopyComplete
 D:\AlluringDecors\obj\Debug\AlluringDecors.dll
