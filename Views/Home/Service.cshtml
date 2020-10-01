@@ -1,0 +1,38 @@
+﻿@model IEnumerable<AlluringDecors.Models.Project>
+<div class="services-area section-padding3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="cl-xl-7 col-lg-8 col-md-10">
+                <!-- Section Tittle -->
+                <div class="section-tittle text-center mb-70">
+                    <span>Project</span>
+                    <h2>Our Best Project</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var items in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-services mb-200">
+                        <div class="services-img">
+                            <img src="@items.Image.ImageURL" alt="">
+                        </div>
+                        <div class="services-caption">
+                            <h2 style="color: black;font-size: 20px">
+                                @Html.ActionLink(items.ProjectName, "DetailtProject", new { id = items.id })
+                          @*      <a href="/Home/DetailtProject/@items.id">@Html.DisplayFor(modelItem => items.ProjectName)</a>*@
+
+                            </h2>
+                            <p class="pera1">@Html.DisplayFor(modelItem => items.Area) m2</p>
+                            <p class="pera1">@Html.DisplayFor(modelItem => items.Price) $</p>
+                      
+                            <p class="pera2">@Html.DisplayFor(modelItem => items.ProjectCategory.CategoryName)</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

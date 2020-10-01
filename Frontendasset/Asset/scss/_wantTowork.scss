@@ -1,0 +1,38 @@
+.wantToWork-area{
+    background: #ff0000;
+    .wantToWork-caption{
+        h2{
+            color: #fff;
+            font-size: 60px;
+            font-weight:700;
+            line-height: 1.5;
+            margin: 0;
+
+            @media #{$md}{
+                font-size: 30px; 
+            }
+            @media #{$xs}{
+                font-size: 25px; 
+                margin-bottom: 20px;
+            }
+        } 
+        & p{
+            font-size: 18px;
+        }
+    }    
+    .wantToWork-btn{
+
+        @media #{$sm}{
+            float: left;
+            margin-top: 30px;
+        }
+        @media #{$xs}{
+            float: left;
+            margin-top: 30px;
+        }
+        @media #{$md}{
+            float: left;
+            margin-top: 30px;
+        }
+    }
+}

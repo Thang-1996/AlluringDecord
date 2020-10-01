@@ -1,17 +1,199 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Interior Design HTML-5 Template </title>
     <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Frontendasset/Asset/img/favicon.ico">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/slicknav.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/flaticon.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/animate.min.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/themify-icons.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/slick.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/nice-select.css">
+    <link rel="stylesheet" href="~/Frontendasset/Asset/css/style.css">
 </head>
 
-<body id="page-top">
-    <h1>Đây là trang home</h1>
-    <div>@RenderBody()</div>
-</body>
+<body class="body-bg">
+    <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="~/Frontendasset/Asset/img/logo/loder.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="index.html"><img src="~/Frontendasset/Asset/img/logo/logo.png" alt=""></a>
+                        </div>
+                        <!-- Main-menu -->
+                        <div class="main-menu f-right d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/Home/About">About</a></li>
+                                    <li><a href="/Home/Service">Project</a></li>
+                                    <li><a href="/Home/Contact">Contact</a></li>
+                        
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Header-btn -->
+                        <div class="header-btns d-none d-lg-block f-right">
+                            <a href="#" class="btn header-btn">Contact Us</a>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    @RenderBody()
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area footer-bg">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="~/Frontendasset/Asset/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Grabbing the concsumer’s attention isn’t enough you have to keep that attention for at least a.</p>
+                                    </div>
+                                </div>
+                                <div class="footer-number">
+                                    <h4><span>+564 </span>7885 3222</h4>
+                                    <p>youremail@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 col-md-5 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Useful Links</h4>
+                                </div>
+                                <div class="footer-cap">
+                                    <span>New York</span>
+                                    <p>123 East 26th Street, Fifth Floor, New York, NY 10011</p>
+                                </div>
+                                <div class="footer-cap">
+                                    <span>Japan</span>
+                                    <p>123 East 26th Street, Fifth Floor, New York, NY 10011</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Instagram -->
+                        <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Instagram Feed</h4>
+                                </div>
+                                <div class="instagram-gellay">
+                                    <ul class="insta-feed">
+                                        <li><a href="#"><img src="~/Frontendasset/Asset/img/gallery/instagram1.png" alt=""></a></li>
+                                        <li><a href="#"><img src="~/Frontendasset/Asset/img/gallery/instagram2.png" alt=""></a></li>
+                                        <li><a href="#"><img src="~/Frontendasset/Asset/img/gallery/instagram3.png" alt=""></a></li>
+                                        <li><a href="#"><img src="~/Frontendasset/Asset/img/gallery/instagram4.png" alt=""></a></li>
+                                        <li><a href="#"><img src="~/Frontendasset/Asset/img/gallery/instagram5.png" alt=""></a></li>
+                                        <li><a href="#"><img src="~/Frontendasset/Asset/img/gallery/instagram6.png" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <span>Follow Us</span>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
 
+    <!-- JS here -->
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src="~/Frontendasset/Asset/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="~/Frontendasset/Asset/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/Frontendasset/Asset/js/popper.min.js"></script>
+    <script src="~/Frontendasset/Asset/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="~/Frontendasset/Asset/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="~/Frontendasset/Asset/js/owl.carousel.min.js"></script>
+    <script src="~/Frontendasset/Asset/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="~/Frontendasset/Asset/js/wow.min.js"></script>
+    <script src="~/Frontendasset/Asset/js/animated.headline.js"></script>
+    <script src="~/Frontendasset/Asset/js/jquery.magnific-popup.js"></script>
+
+    <!-- Nice-select, sticky -->
+    <script src="~/Frontendasset/Asset/js/jquery.nice-select.min.js"></script>
+    <script src="~/Frontendasset/Asset/js/jquery.sticky.js"></script>
+
+    <!-- contact js -->
+    <script src="~/Frontendasset/Asset/js/contact.js"></script>
+    <script src="~/Frontendasset/Asset/js/jquery.form.js"></script>
+    <script src="~/Frontendasset/Asset/js/jquery.validate.min.js"></script>
+    <script src="~/Frontendasset/Asset/js/mail-script.js"></script>
+    <script src="~/Frontendasset/Asset/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="~/Frontendasset/Asset/js/plugins.js"></script>
+    <script src="~/Frontendasset/Asset/js/main.js"></script>
+    @RenderSection("Scripts",required:false)
+</body>
 </html>

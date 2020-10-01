@@ -1,0 +1,105 @@
+
+.gallery-area{
+    background: #0c0f16;
+    .single-gallery{
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            content: "";
+            background-color: rgba(1,10,28,0.6);
+            opacity: 0;
+            z-index: 1;
+            @include transition(.4s);
+        }
+        &:hover{
+            &::before{
+                opacity: 1;
+                visibility:visible;
+                }
+        }
+        // img
+        .gallery-img{
+            position: relative;
+            height: 565px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        // Caption
+        .thumb-content-box {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: .4s;
+            z-index: 2;
+            .thumb-content {
+                position: absolute;
+                padding-left: 40px;
+                bottom: 42px;
+                display: flex;
+                align-items: end;
+                h3 {
+                    color: #ffffff;
+                    font-weight: 600;
+                    font-size: 48px;
+                    margin: 0;
+                    @media #{$laptop}{
+                        font-size: 32px;
+                    }
+                    @media #{$lg}{
+                        font-size: 32px;
+                    }
+                    @media #{$xs}{
+                        font-size: 32px;
+                    }
+                    span{
+                        font-size: 39px;
+                        display: block;
+                        @media #{$laptop}{
+                            font-size: 29px;
+                        }
+                        @media #{$lg}{
+                            font-size: 29px;
+                        }
+                        @media #{$xs}{
+                            font-size: 29px;
+                        }
+                    }
+                }
+                a {
+                    color: #fff;
+                    background: #ff0000;
+                    width: 40px;
+                    height: 40px;
+                    display: block;
+                    text-align: center;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    margin-left: 75px;
+                    &:hover {
+                        background: #fff;
+                        color: #ff0000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.single-gallery:hover .gallery-img-thumb ,.single-gallery:hover .thumb-content-box{
+    opacity: 1;
+    visibility:visible;
+}
+
+

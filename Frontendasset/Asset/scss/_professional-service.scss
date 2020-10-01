@@ -1,0 +1,42 @@
+.professional-services{
+    height: 800px;
+    width: 100%;
+    @media #{$md}{
+        height: 654px;
+    }
+}
+.profession-caption{
+    margin-top: -418px;
+    @media #{$md}{
+        margin-top: -500px;
+    }
+    @media #{$sm}{
+        margin-top: 0px;
+    }
+    @media #{$xs}{
+        margin-top: 0px;
+    }
+    .profession-details{
+        background: #fff;
+        padding: 90px;
+        @media #{$sm}{
+            padding: 30px;
+        }
+        @media #{$xs}{
+            padding: 30px;
+        }
+        h2{
+            @media #{$xs}{
+               font-size: 23px;
+            }
+        }
+        p{
+            @media #{$xs}{
+               font-size: 17px;
+            }
+        }
+    }
+  }
+  .body-bg{
+   background: #12151a;
+  }

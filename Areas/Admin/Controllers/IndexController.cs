@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace AlluringDecors.Areas.Admin.Controllers
 {
-    public class HomeController : Controller
+    public class IndexController : Controller
     {
-        // GET: Admin/Home
+        // GET: Admin/Index
         public ActionResult Index()
         {
             return View();
