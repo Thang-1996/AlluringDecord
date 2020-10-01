@@ -17,13 +17,13 @@ namespace AlluringDecors.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProjectCategory()
         {
-            this.DesignTypes = new HashSet<DesignType>();
+            this.Projects = new HashSet<Project>();
         }
     
         public int id { get; set; }
         public string CategoryName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DesignType> DesignTypes { get; set; }
+        public virtual ICollection<Project> Projects { get; set; }
     }
 }

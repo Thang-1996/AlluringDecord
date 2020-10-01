@@ -29,7 +29,8 @@ namespace AlluringDecors.Models
         public string Address { get; set; }
         public int ImageID { get; set; }
         public string Status { get; set; }
-        public int DesignTypeID { get; set; }
+        public Nullable<int> DesignTypeID { get; set; }
+        public int ProjectCategory_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contract> Contracts { get; set; }
@@ -37,5 +38,6 @@ namespace AlluringDecors.Models
         public virtual ICollection<DesignPackage> DesignPackages { get; set; }
         public virtual DesignType DesignType { get; set; }
         public virtual Image Image { get; set; }
+        public virtual ProjectCategory ProjectCategory { get; set; }
     }
 }

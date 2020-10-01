@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="AlluringDecorsModelStoreContainer" CdmEntityContainer="AlluringDecorsEntities">
+  <EntityContainerMapping StorageEntityContainer="AlluringDecorsModelStoreContainer" CdmEntityContainer="AlluringDecorsEntities1">
     <EntitySetMapping Name="Admins">
       <EntityTypeMapping TypeName="AlluringDecorsModel.Admin">
         <MappingFragment StoreEntitySet="Admin">
@@ -54,7 +54,6 @@
         <MappingFragment StoreEntitySet="DesignType">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="DesignTypeName" ColumnName="DesignTypeName" />
-          <ScalarProperty Name="ProjectCategoryID" ColumnName="ProjectCategoryID" />
           <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -80,6 +79,7 @@
           <ScalarProperty Name="ImageID" ColumnName="ImageID" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="DesignTypeID" ColumnName="DesignTypeID" />
+          <ScalarProperty Name="ProjectCategory_ID" ColumnName="ProjectCategory_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

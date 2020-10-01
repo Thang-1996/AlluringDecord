@@ -1,0 +1,69 @@
+﻿@model PagedList.IPagedList<AlluringDecors.Models.ProjectCategory>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>ProejctCategory List</h2>
+<div class="col-lg-12 col-md-12" style="margin-bottom:50px;">
+    <div class="row">
+        @using (Html.BeginForm("Index", "ProjectCategories", FormMethod.Get, new { @class = "d-none d-sm-inline-block form-inline mr-auto ml-md-6 my-2 my-md-0 mw-100 navbar-search col-lg-4 col-md-4" }))
+        {
+
+
+            <div class="input-group">
+                @Html.TextBox("Search", ViewBag.CurrentFilter as string, new { @class = "form-control bg-light border-1 small" })
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
+                </div>
+
+            </div>
+
+
+        }
+        <div class="col-lg-2 col-md-2"></div>
+        <div class="col-lg-6 col-md-6">
+            <a href="/Admin/ProjectCategories/Create" style="float:right" class="btn btn-primary">Create</a>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Category Name", "Index", new
+         {
+             sortOrder = ViewBag.NameSortParm,
+
+        currentFilter = ViewBag.CurrentFilter
+    });
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="row">
+    <div class="col-sm-12 col-md-10">
+        Current @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount Page
+    </div>
+    <div class="col-sm-12 col-md-2">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, @class = "btn btn-sm btn-primary" }))
+
+    </div>
+</div>

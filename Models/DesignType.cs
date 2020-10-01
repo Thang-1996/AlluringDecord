@@ -22,10 +22,8 @@ namespace AlluringDecors.Models
     
         public int ID { get; set; }
         public string DesignTypeName { get; set; }
-        public int ProjectCategoryID { get; set; }
         public decimal Price { get; set; }
     
-        public virtual ProjectCategory ProjectCategory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Project> Projects { get; set; }
     }

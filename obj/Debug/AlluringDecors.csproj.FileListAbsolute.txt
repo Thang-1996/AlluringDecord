@@ -444,3 +444,8 @@ D:\AlluringDecors\obj\Debug\AlluringDecors.csproj.CoreCompileInputs.cache
 D:\AlluringDecors\obj\Debug\AlluringDecors.csproj.CopyComplete
 D:\AlluringDecors\obj\Debug\AlluringDecors.dll
 D:\AlluringDecors\obj\Debug\AlluringDecors.pdb
+D:\AlluringDecors\bin\PagedList.dll
+D:\AlluringDecors\bin\PagedList.Mvc.dll
+D:\AlluringDecors\bin\PagedList.xml
+D:\AlluringDecors\bin\PagedList.Mvc.xml
+D:\AlluringDecors\obj\Debug\AlluringDecors.csprojAssemblyReference.cache

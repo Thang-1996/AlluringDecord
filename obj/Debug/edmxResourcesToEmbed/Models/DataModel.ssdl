@@ -5,10 +5,10 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserName" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="ContractID" Type="int" Nullable="false" />
     <Property Name="RoleID" Type="int" Nullable="false" />
   </EntityType>
@@ -17,12 +17,12 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ContractName" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ContractName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="ContractStartDate" Type="date" Nullable="false" />
     <Property Name="ContractEndDate" Type="date" Nullable="false" />
-    <Property Name="ContractType" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="ContractStatus" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ContractType" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ContractStatus" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="ProjectID" Type="int" Nullable="false" />
     <Property Name="ContractSigningDate" Type="date" Nullable="false" />
   </EntityType>
@@ -32,15 +32,15 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ContractID" Type="int" Nullable="false" />
-    <Property Name="TotalProcess" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="TotalProcess" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="DesignPackage">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="PackageName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="PackageName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="ProjectID" Type="int" Nullable="false" />
   </EntityType>
@@ -49,8 +49,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="DesignTypeName" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="ProjectCategoryID" Type="int" Nullable="false" />
+    <Property Name="DesignTypeName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
   </EntityType>
   <EntityType Name="Image">
@@ -58,46 +57,47 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ProjectImage" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="ImageURL" Type="varchar" MaxLength="255" />
+    <Property Name="ProjectImage" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ImageURL" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Project">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ProjectName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="Area" Type="int" Nullable="false" />
     <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="ImageID" Type="int" Nullable="false" />
-    <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="DesignTypeID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DesignTypeID" Type="int" />
+    <Property Name="ProjectCategory_ID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ProjectCategory">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="CategoryName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="RoleName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserName" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="ContractID" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="Admin_fk0">
@@ -160,18 +160,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="DesignType_fk0">
-    <End Role="ProjectCategory" Type="Self.ProjectCategory" Multiplicity="1" />
-    <End Role="DesignType" Type="Self.DesignType" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ProjectCategory">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="DesignType">
-        <PropertyRef Name="ProjectCategoryID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="Project_fk0">
     <End Role="Image" Type="Self.Image" Multiplicity="1" />
     <End Role="Project" Type="Self.Project" Multiplicity="*" />
@@ -185,7 +173,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Project_fk1">
-    <End Role="DesignType" Type="Self.DesignType" Multiplicity="1" />
+    <End Role="DesignType" Type="Self.DesignType" Multiplicity="0..1" />
     <End Role="Project" Type="Self.Project" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DesignType">
@@ -193,6 +181,18 @@
       </Principal>
       <Dependent Role="Project">
         <PropertyRef Name="DesignTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Project_fk2">
+    <End Role="ProjectCategory" Type="Self.ProjectCategory" Multiplicity="1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProjectCategory_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -239,16 +239,16 @@
       <End Role="Project" EntitySet="Project" />
       <End Role="DesignPackage" EntitySet="DesignPackage" />
     </AssociationSet>
-    <AssociationSet Name="DesignType_fk0" Association="Self.DesignType_fk0">
-      <End Role="ProjectCategory" EntitySet="ProjectCategory" />
-      <End Role="DesignType" EntitySet="DesignType" />
-    </AssociationSet>
     <AssociationSet Name="Project_fk0" Association="Self.Project_fk0">
       <End Role="Image" EntitySet="Image" />
       <End Role="Project" EntitySet="Project" />
     </AssociationSet>
     <AssociationSet Name="Project_fk1" Association="Self.Project_fk1">
       <End Role="DesignType" EntitySet="DesignType" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="Project_fk2" Association="Self.Project_fk2">
+      <End Role="ProjectCategory" EntitySet="ProjectCategory" />
       <End Role="Project" EntitySet="Project" />
     </AssociationSet>
     <AssociationSet Name="User_fk0" Association="Self.User_fk0">

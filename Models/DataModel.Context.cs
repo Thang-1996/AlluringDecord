@@ -13,10 +13,10 @@ namespace AlluringDecors.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AlluringDecorsEntities : DbContext
+    public partial class AlluringDecorsEntities1 : DbContext
     {
-        public AlluringDecorsEntities()
-            : base("name=AlluringDecorsEntities")
+        public AlluringDecorsEntities1()
+            : base("name=AlluringDecorsEntities1")
         {
         }
     

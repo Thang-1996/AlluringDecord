@@ -52,6 +52,12 @@
     <Reference Include="Microsoft.Data.OData, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Data.OData.5.8.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -192,7 +198,14 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ContractProcessesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ContractsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DesignPackagesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DesignTypesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ImagesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProjectCategoriesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProjectsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -1921,6 +1934,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2109,6 +2123,8 @@
     <Content Include="AdminAssets\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="AdminAssets\vendor\jquery\jquery.min.map" />
     <Content Include="AdminAssets\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
     <EntityDeploy Include="Models\DataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
@@ -2116,13 +2132,42 @@
     <Content Include="Models\DataModel.edmx.diagram">
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Areas\Admin\Views\Contracts\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Contracts\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Contracts\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Contracts\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Contracts\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ContractProcesses\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ContractProcesses\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ContractProcesses\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ContractProcesses\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ContractProcesses\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Projects\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Projects\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Projects\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Projects\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Projects\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignPackages\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignPackages\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignPackages\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignPackages\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignPackages\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignTypes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignTypes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignTypes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignTypes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DesignTypes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProjectCategories\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ProjectCategories\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ProjectCategories\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ProjectCategories\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ProjectCategories\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Images\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Images\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Images\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Images\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Images\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2162,6 +2207,7 @@
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
